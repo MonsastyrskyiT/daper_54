@@ -21,7 +21,7 @@ internal class Program
             var repository = new MovieRepository(context);
             var userMovies = await repository.GetUserMoviesAsync();
 
-            Console.WriteLine("База AC готова: view vw_UserMovies і процедура AddUser створені.");
+            Console.WriteLine("База AC готова: view vw_UserMovies і процедура AddUser створені");
             foreach (var row in userMovies)
             {
                 Console.WriteLine($"{row.Username}: {row.MovieTitle ?? "фільми ще не додані"}");
